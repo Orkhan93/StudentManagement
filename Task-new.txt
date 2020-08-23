@@ -1,0 +1,61 @@
+class Telebe:
+    def __init__(self,kod,ad,soyad,mail,nomre):
+        self.kod=kod
+        self.ad=ad
+        self.soyad=soyad
+        self.mail=mail
+        self.nomre=nomre
+
+Telebeler = [ Telebe(331,"Zaur","Veliyev","dokta@mail.ru",+994553665236),
+             Telebe(969,"Huseyn","Hesenov","dokta@mail.ru",+994502020250),
+             Telebe(453,"Ayxan","Umarov","dokta@mail.ru",+994554886325),
+             Telebe(127,"Kamil","Mahmudov","dokta@mail.ru",+994512001133),
+             Telebe(801,"Rauf","Alixanov","dokta@mail.ru",+994772553698),
+             Telebe(863,"Tural","Soltanov","dokta@mail.ru",+994554223698),
+             Telebe(412,"Cabbar","Haciyev","dokta@mail.ru",+994503669887),
+             Telebe(755,"Ekber","Hesenli","dokta@mail.ru",+994552223322),
+             Telebe(673,"Vaqif","Eliyev","dokta@mail.ru",+994503213214),
+             Telebe(123,"Orxan","Mustafayev","dokta@mail.ru",+994518188121)]
+
+def telebeDaxilEt(self):
+    Telebeler.append(Telebe(int(input("Telebe kodunu daxil edin : ")),
+    input("Telebenin adını daxil edin : "),input("Telebenin soyadını daxil edin : "),
+    input("Telebenin mail adresini daxil edin : "),int(input("Telebenin nomresini daxil edin : "))))
+
+def kodaGoreMelumatiSil(kod):
+    for i in range(len(Telebeler)):
+        if kod == Telebeler[i].kod:
+            Telebeler[i].ad = "   Melumat silindi   "
+            Telebeler[i].soyad = "   Melumat silindi   "
+            Telebeler[i].mail = "   Melumat silindi   "
+            Telebeler[i].nomre = "   Melumat silindi   "
+            print(f"  - {kod} - Kodu olan telebenin butun melumatlari silindi   ")
+            print((f"Telebenin kodu : {Telebeler[i].kod}\nTelebenin adı : {Telebeler[i].ad}\n"
+                  f"Telebenin soyadı : {Telebeler[i].soyad}\nTelebenin mail adresi : {Telebeler[i].mail}\n"
+                  f"Telebenin nomresi : {Telebeler[i].nomre}"))
+
+def kodaGoreMelumatDeyisdir(kod,name,surname,email,phone):
+    for i in range(len(Telebeler)):
+        if kod == Telebeler[i].kod:
+            Telebeler[i].ad = name
+            Telebeler[i].soyad = surname
+            Telebeler[i].mail = email
+            Telebeler[i].nomre = phone
+            print((f"Telebenin kodu : {Telebeler[i].kod}\nTelebenin adı : {Telebeler[i].ad}\n"
+                  f"Telebenin soyadı : {Telebeler[i].soyad}\nTelebenin mail adresi : {Telebeler[i].mail}\n"
+                  f"Telebenin nomresi : {Telebeler[i].nomre}"))
+
+def adaGoreMelumatVer(ad):
+    for i in range(len(Telebeler)):
+        if ad == Telebeler[i].ad:
+            print(f"Telebenin kodu : {Telebeler[i].kod}\nTelebenin adı : {Telebeler[i].ad}\n"
+                  f"Telebenin soyadı : {Telebeler[i].soyad}\nTelebenin mail adresi : {Telebeler[i].mail}\n"
+                  f"Telebenin nomresi : {Telebeler[i].nomre}")
+
+def butunTelebelerinMelumati():
+    for i in Telebeler:
+        print(f"Telebenin kodu : {i.kod}\nTelebenin adı : {i.ad}\nTelebenin soyadı : {i.soyad}\n"
+              f"Telebenin mail adresi : {i.mail}\nTelebenin nomresi : {i.nomre}\n")
+
+
+
